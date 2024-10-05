@@ -15,6 +15,10 @@
     --Black: hsl(0, 0%, 7%);
 }
 
+body{
+    font-family: "DM Sans", system-ui;
+}
+
 /* Tablet Screens */
 @media(max-width: 51.25rem){
 
