@@ -17,14 +17,297 @@
 
 body{
     font-family: "DM Sans", system-ui;
+    background-color: #f6f6f6;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 144rem;
 }
 
-/* Tablet Screens */
-@media(max-width: 51.25rem){
-
+.grid-row {
+    width: auto;
+    display: grid;
+    padding: 4rem;
+    grid-template: repeat(4, auto) / repeat(1, 16rem);
+    gap: 2.8rem;
 }
+
+.grid-item{
+    cursor: pointer;
+}
+/* sidebar styling START*/
+.side-box {
+    border-radius: 5px;
+    width: 256px;
+    margin: 20px;
+    row-gap: 10px;
+}
+
+.schedule-create {
+    background: var(--Yellow-100);
+    height: 25.938rem;
+    max-height: 65%;
+    grid-row: span 2;
+    width: 16rem;
+    padding: 2rem 2rem;
+}
+
+.schedule-create h2{
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.schedule-create span{
+    color: var(--Purple-500);
+}
+
+.schedule-create img{
+    width: 190.47px;
+    position: relative;
+    top: 1.5rem;
+}
+
+.ai-content {
+    background: var(--Yellow-500);
+    width: 16rem;
+    height: 27.125rem;
+    max-height: 165%;
+    grid-row: span 2;
+    margin-top: -13.5rem;
+}
+
+.ai-content h3{
+    font-size: 2.7rem;
+    font-weight: 400;
+    padding: 1rem 2rem;
+}
+
+.ai-content img{
+    width: 12.75rem;
+        position: relative;
+            left: 1.5rem;
+}
+/* sidebar styling END*/
+
+.main-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* main styling */
+.social-box {
+    background: var(--Purple-500);
+    border-radius: 5px;
+    width: 34rem;
+    height: 20.25rem;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2 / 4;
+}
+
+.social-box h1{
+    color: var(--White);
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.social-box span{
+    color: var(--Yellow-500);
+}
+
+.social-box img{
+    width: 12rem;
+}
+
+.social-box p{
+    color: var(--White);
+    position: relative;
+    top: 1rem;
+}
+
+.main-box {
+    width: 16rem;
+    height: 15.438rem;
+    overflow: hidden;
+}
+
+.manage {
+    background: var(--White);
+    border-radius: 5px;
+    width: 16rem;
+    height: 15.438rem;
+}
+
+.manage h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: 13rem;
+    position: relative;
+    left: 2rem;
+    top: 0.7rem;
+}
+
+.manage img{
+    width: 19.75rem;
+    /* height: 4.159rem; */
+    position: relative;
+    top: 1.2rem;
+    left: 1.5rem;
+    overflow: hidden;
+}
+
+.maintain {
+    background: var(--Yellow-500);
+    border-radius: 5px;
+    width: 16rem;
+    height: 15.438rem;
+}
+
+.maintain h3{
+    font-size: 24px;
+    font-weight: 500;
+    width: 12rem;
+    position: relative;
+    top: 1.5rem;
+    left: 2rem;
+    color: var(--Black);
+}
+
+.maintain img{
+    position: relative;
+    left: 1.5rem;
+    top: 2.5rem;
+    width: 13rem;
+}
+
+.box-scheduling {
+    background-color: var(--Purple-100);
+    border-radius: 5px;
+    width: 16rem;
+    height: 37.688rem;
+    grid-column: 4 / 5;
+    grid-row: span 2;
+    overflow: hidden;
+}
+
+.box-scheduling h2{
+    padding: 2.5rem;
+    font-size: 1.7rem;
+}
+
+.box-scheduling p{
+    padding: 2.5rem;
+}
+
+.box-scheduling img{
+    width: 22.331rem;
+    position: relative;
+    left: 2.5rem;
+}
+
+.audience-growth-box {
+    background: var(--White);
+    border-radius: 5px;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audience-growth-box h3{
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.audience-growth-box img{
+    width: 11.183rem;
+}
+
+.growth-box {
+    background: var(--Purple-500);
+    border-radius: 10px;
+    width: 34rem;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+        grid-column: 3 / 5;
+}
+
+.growth-box h3{
+    color: var(--White);
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+
+.growth-box img{
+    width: 17.355rem;
+}
+/* main styling */
 
 /* Mobile Screens */
-@media(max-width: 26.875rem){
+@media(max-width: 26.875em){
+   .grid-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
 
+   .box-scheduling p{
+    text-align: center;
+   }
+
+
+   .ai-content{
+    width: 348px;
+    order: 1;
+    margin-top: 1rem;
+   }
+
+   .social-box{
+    width: 21.438rem;
+    order: -1;
+   }
+
+   .manage{
+    order: -1;
+    width: 21.438rem;
+   }
+
+   .manage h3{
+    font-size: 1.3rem;
+    font-weight: 700;
+    width: 17rem;
+   }
+
+   .maintain{
+    order: -1;
+    width: 21.438rem;
+   }
+
+   .maintain h3{
+    width: 19rem;
+   }
+
+   .box-scheduling{
+    order: 0;
+    width: 21.438rem;
+   }
+
+   .schedule-create{
+        width: 21.75rem;
+   }
+
+   .social-box h1{
+    font-size: 2.4rem;
+   }
+
+   .growth-box{
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+   }
 }
